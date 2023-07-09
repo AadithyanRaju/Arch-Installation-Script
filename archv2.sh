@@ -5,6 +5,11 @@
 if [ $# -ne 9 ]; then
     echo "Error: Invalid number of arguments"
     echo "Usage: bash $0 username hostname userpassword rootpassword disk keyborad_layout timezone locale"
+    echo "Example: bash $0 user arch 12345678 12345678 /dev/sda us /usr/share/zoneinfo/Asia/Ho_Chi_Minh en_US.UTF-8"
+    echo "run 'fdisk -l' to see all disk"
+    echo "run 'ls /usr/share/kbd/keymaps/**/*.map.gz' to see all keyboard layout"
+    echo "run 'ls /usr/share/zoneinfo' to see all timezone"
+    echo "run 'cat /etc/locale.gen' to see all locale"
     exit 1
 fi
 
